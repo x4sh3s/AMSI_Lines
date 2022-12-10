@@ -9,7 +9,7 @@
 ```powershell
 PS C:\AMSI_Lines>import-module AMSI.ps1
 ```
-3. execute the function `AMSI_Lines` : `AMSI_Lines -File "Url of the File" -Command "Command to be executed directly
+3. execute the function `AMSI_Lines` : `AMSI_Lines -File "Url of the File" -Command "Command to be executed directly"`
 
 ### Examples:
 
