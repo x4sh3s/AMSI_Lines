@@ -1,6 +1,7 @@
 # AMSI_Lines
 
 *Bypass AMSI By Dividing files  into multiple smaller files*
+
 Blog post: https://x4sh3s.github.io/posts/Divide-and-bypass-amsi/
 
 ### How To Use It
